@@ -1,5 +1,11 @@
 # test-k6
 
+## Descrição
+
+Testes de API de Performance, Carga, Stress e Smoke utilizando K6 para automação.
+
+Todos os testes já rodam em CI (basta acessar no Github a aba "Actions", e também são gerados relatórios com uma boa visualização dos resultados da execução.
+
 # :hammer: Para executar os testes:
 
 ## Existem duas formas:
