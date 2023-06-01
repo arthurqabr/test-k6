@@ -9,4 +9,5 @@ jobs:
 
     - name: step 2 - run k6 full test
       uses: grafana/k6-action@v0.3.0
-      with: ./scripts/*.js
+      with:
+        filename: ./scripts/*.js
