@@ -1,0 +1,14 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Pull loadimpact/k6 image..
+      - docker pull loadimpact/k6
+  build:
+    commands:
+      - echo Run performance test
+      - docker ruin -i loadimpact/k6 run - <scripts/*.js
+  post_build:
+    commands:
+      - echo Performance test complete
