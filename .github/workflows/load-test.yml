@@ -7,7 +7,7 @@ jobs:
       - name: step 1 - checkout
         uses: actions/checkout@v3
 
-      - name: step 2 - run k6 full test
+      - name: step 2 - run K6 full test
         uses: grafana/k6-action@v0.3.0
         with:
-          filename: scripts/crocodile_load_test.js
+          filename: scripts/*.js
