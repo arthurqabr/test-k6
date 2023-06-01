@@ -1,5 +1,5 @@
 {
-    "name": "seu-projeto",
+    "name": "k6-test",
     "version": "1.0.0",
     "scripts": {
       "test": "find scripts -name '*.js' | xargs -I {} k6 run {}"

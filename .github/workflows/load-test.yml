@@ -7,8 +7,5 @@ jobs:
       - name: step 1 - checkout
         uses: actions/checkout@v3
 
-      - name: step 2 - Install K6
-        run: npm install -g k6
-
-      - name: step 3 - Run K6 full test
-        run: npm test
+      - name: step 2 - run K6 full test
+        run: ./run-tests.sh
