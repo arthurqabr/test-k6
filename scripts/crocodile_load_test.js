@@ -14,6 +14,7 @@ Critérios:
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { SharedArray } from "k6/data"; // para realizar a leitura de mais itens
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
   stages: [
@@ -47,4 +48,10 @@ export default function () {
   });
 
   sleep(1);
+}
+
+export function handleSummary(data) {
+  return {
+    "./metrics/crocodile_load_test.html": htmlReport(data),
+  };
 }
